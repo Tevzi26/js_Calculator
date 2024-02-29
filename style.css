@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+* {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 425px;
+    height: 690px
+}
+
+.input {
+    border-radius: 7px;
+    height: 463px;
+    width: 370px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas: 
+    "ac divid mult minus"
+    "seven eight nine plus"
+    "four five six plus"
+    "one two three equal"
+    "zero dec del equal"
+    ;
+}
+
+.btn {
+    font-size: 24px;
+    margin: 2px;
+}
+
+
+
+
+#ac {
+    grid-area: ac;
+}
+
+#divid {
+    grid-area: divid;
+}
+
+#mult {
+    grid-area: mult;
+}
+
+#minus {
+    grid-area: minus;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+#dec {
+    grid-area: dec;
+}
+
+#del {
+    grid-area: del;
+}
+
+#equal {
+    grid-area: equal;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two{
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#zero {
+    grid-area: zero;
+}
