@@ -19,8 +19,46 @@ body {
     height: 690px
 }
 
+.calculator {
+    border-radius: 7px;
+    background-color: #b6bfc4;
+    margin: 15px;
+    padding-top: 15px;
+}
+
+.calc {
+    height: 40%;
+    padding-inline: 15px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.calc p {
+    width: 100%;
+    text-align: right;
+}
+
+.result {
+    height: 60%;
+    padding-inline: 15px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.result p {
+    width: 100%;
+    text-align: right;
+}
+
 .display {
-    height: 120px;
+    height: 140px;
+    margin: 15px;
+    border-radius: 7px;
+    background-color: #597b8c;
 }
 
 .input {
