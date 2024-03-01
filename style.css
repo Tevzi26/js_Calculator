@@ -105,6 +105,8 @@ body {
 
 .operator {
     background-color: #6d9ab4;
+    font-size: 40px;
+    font-weight: 400;
 }
 
 .operator:active {
@@ -147,6 +149,8 @@ body {
 
 #equal {
     grid-area: equal;
+    font-size: 40px;
+    font-weight: 400;
 }
 
 #one {
