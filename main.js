@@ -3,6 +3,7 @@ let a = 0;
 let b = 0;
 let c = 0;
 let operation = "";
+let op = true;
 
 // Functions
 function add(...num) {
@@ -32,16 +33,20 @@ buttons.forEach((button) => {
             a = 0;
             b = 0;
             c = 0;
+            op = true;
             calc.innerText = a;
             result.innerText = c
         } else if (button.classList.contains("num")) {
             a = a * 10 + Number(button.innerText);
             calc.innerText = a;
         } else if (button.classList.contains("operator")) {
-            operation = button.innerText;
-            b = a;
-            a = 0;
-            calc.innerText = operation;
+            if (op) {
+                operation = button.innerText;
+                b = a;
+                a = 0;
+                calc.innerText = operation;
+                op = false;
+            }
         } else if (button.id == "equal") {
             switch (operation) {
                 case "+":
@@ -56,8 +61,17 @@ buttons.forEach((button) => {
                 case "÷":
                     c = divide(a,b);
                     break;
+                default:
+                    c = a;
             }
+            a = c;
+            op = true;
             result.innerText = c
+            c = 0;
+            b = 0;
+        } else if (button.id == "del") {
+            a = Math.floor(a / 10);
+            calc.innerText = a;
         }
     });
 });
