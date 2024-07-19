@@ -4,9 +4,26 @@ let b = 0;
 let c = 0;
 let operation = "";
 
+// Functions
+function add(...num) {
+    return b + a;
+}
+
+function subtract(...num) {
+    return b - a;
+}
+
+function multiply(...num) {
+    return b * a;
+}
+
+function divide(...num) {
+    return b / a;
+}
+
 // Get all buttons and display
 const calc = document.querySelector(".calc p");
-const result = document.querySelector(".result");
+const result = document.querySelector(".result p");
 const buttons = document.querySelectorAll(".btn");
 
 buttons.forEach((button) => {
@@ -15,11 +32,32 @@ buttons.forEach((button) => {
             a = 0;
             b = 0;
             c = 0;
-            calc.innerText = b;
-        } else if (button.classList.contains("num")){
+            calc.innerText = a;
+            result.innerText = c
+        } else if (button.classList.contains("num")) {
             a = a * 10 + Number(button.innerText);
-            b = a
-            calc.innerText = b;
+            calc.innerText = a;
+        } else if (button.classList.contains("operator")) {
+            operation = button.innerText;
+            b = a;
+            a = 0;
+            calc.innerText = operation;
+        } else if (button.id == "equal") {
+            switch (operation) {
+                case "+":
+                    c = add(a,b);
+                    break;
+                case "-":
+                    c = subtract(a,b);
+                    break;
+                case "*":
+                    c = multiply(a,b);
+                    break;
+                case "÷":
+                    c = divide(a,b);
+                    break;
+            }
+            result.innerText = c
         }
     });
 });
